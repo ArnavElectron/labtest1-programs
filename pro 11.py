@@ -4,9 +4,23 @@
 # type and display the same. For example, for the dictionary {"hello":"string", 5:"integer",
 # “world”: “string”} the sentence is "hello world".
 
-n=int(input())
+n=int(input("enter number of elements:"))
 di=dict()
+st=""
 for i in range(n):
-    x=input()
-    di[x]=type(x)
+    x=input("enter datatype")
+    if x.lower()=="string":
+        y=input("enter data")
+        st+=y+" "
+
+    elif x.lower()=="float":
+        y=float(input("enter data"))
+    elif x.lower()=="integer":
+        y=int(input("enter data"))
+    else:
+        print("Program terminated unknown datatype entered")
+        exit()
+    di[y]=x
+
 print(di)
+print(st)

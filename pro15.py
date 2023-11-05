@@ -2,7 +2,7 @@
 # of the given string in a list in lexicographical order.
 
 in_str=input()
-subli=list()
+subli=set()
 # print(in_str)
 # print(len(in_str))
 for i in range(len(in_str)):
@@ -10,12 +10,6 @@ for i in range(len(in_str)):
         # print(in_str[i:j],i,j)
         if in_str[i:j] not in subli:
             # print("in loop")
-            subli.append(in_str[i:j])
-subli.remove(" ")
-subli.remove('')
+            subli.add(in_str[i:j])
 
-
-
-
-print(subli)
-subli.sort()
+print(sorted(list(subli)))
