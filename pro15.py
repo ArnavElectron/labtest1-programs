@@ -4,9 +4,9 @@
 in_str=input()
 subli=set()
 for i in range(len(in_str)):
-    for j in range(len(in_str)+1):
+    for j in range(i+1,len(in_str)+1):
         # print(in_str[i:j],i,j)
-        if in_str[i:j] not in subli and in_str[i:j] not in ['',' ']:
+        if in_str[i:j] not in subli and in_str[i:j]:
             # print("in loop")
             subli.add(in_str[i:j])
 print(sorted(list(subli)))

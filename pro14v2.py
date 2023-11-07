@@ -9,7 +9,6 @@ for i in in_str:
             startchar="a"
         x=(ord(i)+shiftkey)-ord(startchar)
         x=x%26
-        print(x)
         out_str+=chr(x+ord(startchar))
     else:
         out_str+=i
